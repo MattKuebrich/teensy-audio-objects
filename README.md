@@ -7,6 +7,7 @@ connected, and have a few potentiometers connected.
 
 **Completed Audio Objects:**
 * [Comparator](https://github.com/MattKuebrich/teensy-audio-objects/tree/main/comparator)
+* [Ring Modulator](https://github.com/MattKuebrich/teensy-audio-objects/tree/main/ringmodulator)
 
 **In Development:**
 * Bernoulli Gate
@@ -15,5 +16,4 @@ connected, and have a few potentiometers connected.
 * Envelope Follower / Slew Limiter
 * Limiter
 * Quantizer
-* Ring Modulator
 * Shift Register / Rungler
