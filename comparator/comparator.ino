@@ -1,5 +1,8 @@
 /* Comparator example  
 
+POT01 = Oscillator A frequency
+POT02 = Oscillator B frequency
+
 "The two triangle waves from the oscillators are 'compared' to create one single PWM wave. 
 If one osc is tuned into the LFO range and the other is in audio range you wil hear the classic PWM effect. 
 When both are tuned into the audio range it sounds like a ringmodulator effect."

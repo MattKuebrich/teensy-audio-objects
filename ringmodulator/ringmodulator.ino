@@ -1,6 +1,9 @@
 /* Ring Modulator example
 
-This is just two sine waves being ring modulated.
+  POT01 = Carrier frequency
+  POT02 = Modulator frequency
+
+  Two sine waves being ring modulated.
 
 */
 
@@ -16,14 +19,11 @@ This is just two sine waves being ring modulated.
 AudioSynthWaveformModulated carrier;            //xy=128.42859649658203,283.4285891056061
 AudioSynthWaveformModulated modulator;           //xy=598.428596496582,297.4285891056061
 AudioEffectRingModulator ringmodulator;         //xy=421.57152557373047,549.8571300506592
-AudioOutputUSB           usb1;           //xy=786.2381210327148,602.0951766967773
 AudioOutputI2S           i2s1;           //xy=968.4286117553711,308.42860221862793
 AudioConnection          patchCord7(modulator, 0, ringmodulator, 0);
 AudioConnection          patchCord8(carrier, 0, ringmodulator, 1);
 AudioConnection          patchCord9(ringmodulator, 0, i2s1, 0);
 AudioConnection          patchCord10(ringmodulator, 0, i2s1, 1);
-AudioConnection          patchCord11(ringmodulator, 0, usb1, 0);
-AudioConnection          patchCord12(carrier, 0, usb1, 1);
 AudioControlSGTL5000     sgtl5000_1;     //xy=981.7143249511719,255.00000858306885
 // GUItool: end automatically generated code
 
