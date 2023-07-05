@@ -20,6 +20,9 @@
  * THE SOFTWARE.
  */
  
+#ifndef effect_bernoulligate_h_
+#define effect_bernoulligate_h_
+
 #include <Arduino.h>
 #include "AudioStream.h"
 
@@ -44,3 +47,5 @@ class AudioEffectBernoulliGate : public AudioStream
     float prob = 0.5;
     int choice;
 };
+
+#endif

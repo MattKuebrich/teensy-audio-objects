@@ -20,6 +20,9 @@
  * THE SOFTWARE.
  */
 
+#ifndef effect_ringmodulator_h_
+#define effect_ringmodulator_h_
+
 #include <Arduino.h>
 #include "AudioStream.h"
 
@@ -34,3 +37,4 @@ private:
   audio_block_t *inputQueueArray[2];
 };
  
+#endif
