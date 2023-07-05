@@ -9,6 +9,7 @@ connected, and have a few potentiometers connected.
 * [Comparator](https://github.com/MattKuebrich/teensy-audio-objects/tree/main/comparator)
 * [Ring Modulator](https://github.com/MattKuebrich/teensy-audio-objects/tree/main/ringmodulator)
 * [Bernoulli Gate](https://github.com/MattKuebrich/teensy-audio-objects/tree/main/bernoulligate)
+* [Sample and Hold](https://github.com/MattKuebrich/teensy-audio-objects/tree/main/samplehold)
 
 **In Development:**
 * Bytebeat
@@ -16,5 +17,4 @@ connected, and have a few potentiometers connected.
 * Envelope Follower / Slew Limiter
 * Limiter
 * Quantizer
-* Sample and Hold
 * Shift Register / Rungler
