@@ -6,15 +6,17 @@ The example .ino sketches assume you're using a Teensy 3.x or 4.x, have the [Tee
 connected, and have a few potentiometers connected. 
 
 **Completed Audio Objects:**
+
+* [Bernoulli Gate](https://github.com/MattKuebrich/teensy-audio-objects/tree/main/bernoulligate)
 * [Comparator](https://github.com/MattKuebrich/teensy-audio-objects/tree/main/comparator)
 * [Ring Modulator](https://github.com/MattKuebrich/teensy-audio-objects/tree/main/ringmodulator)
-* [Bernoulli Gate](https://github.com/MattKuebrich/teensy-audio-objects/tree/main/bernoulligate)
 * [Sample and Hold](https://github.com/MattKuebrich/teensy-audio-objects/tree/main/samplehold)
+* [Slew Limiter](https://github.com/MattKuebrich/teensy-audio-objects/tree/main/slewlimiter)
 
 **In Development:**
 * Bytebeat
 * Distortion
-* Envelope Follower / Slew Limiter
+* Envelope Follower
 * Limiter
 * Quantizer
 * Shift Register / Rungler
