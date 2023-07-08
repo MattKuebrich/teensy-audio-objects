@@ -10,7 +10,9 @@ Both of those projects are originally based on the [Crackle UGen in Supercollide
 
 ### Functions
 ``chaos(amount);``
+
 ``rate(freq);``
+
 ``mode(mode);``
 
 Supported modes:
