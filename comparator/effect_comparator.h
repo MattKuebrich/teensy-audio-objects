@@ -37,13 +37,13 @@ class AudioEffectComparator : public AudioStream
     AudioEffectComparator() : AudioStream(2, inputQueueArray) { }
     virtual void update(void);
 
-    void mode(float compare_mode) {
-      this->compare_mode = compare_mode;
+    void mode(float compareMode) {
+      this->compareMode = compareMode;
     }
 
   private:
     audio_block_t *inputQueueArray[2];
-    short compare_mode = 0;
+    short compareMode = 0;
 };
 
 #endif

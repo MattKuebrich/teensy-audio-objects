@@ -1,10 +1,10 @@
 /* Bernoulli Gate example
 
-POT01 = Clock frequency
-POT02 = Bernoulli gate probability
-
 Based on a random process and the probability set, the clock triggers either drum1 (left channel) or drum2 (right channel). 
 The peak object is used as a hacky way to trigger the drums.
+
+POT01 = Clock frequency
+POT02 = Bernoulli gate probability
 
 */
 
@@ -39,8 +39,8 @@ AudioControlSGTL5000     sgtl5000_1;     //xy=981.7143249511719,255.000008583068
 float peakRead1 = 0.0;
 float peakRead2 = 0.0;
 
-float peakRead1_prev = 0.0;
-float peakRead2_prev = 0.0;
+float peakRead1Prev = 0.0;
+float peakRead2Prev = 0.0;
 
 void setup() {
   AudioNoInterrupts();
@@ -78,11 +78,11 @@ void loop() {
     peakRead1 = peak1.read();
   }
 
-  if ((peakRead1 >= 1) && (peakRead1 != peakRead1_prev)) {
+  if ((peakRead1 >= 1) && (peakRead1 != peakRead1Prev)) {
     drum1.noteOn();
   }
 
-  peakRead1_prev = peakRead1;
+  peakRead1Prev = peakRead1;
 
 
   //trigger drum2 on a high pulse
@@ -90,11 +90,11 @@ void loop() {
     peakRead2 = peak2.read();
   }
 
-  if ((peakRead2 >= 1) && (peakRead2 != peakRead2_prev)) {
+  if ((peakRead2 >= 1) && (peakRead2 != peakRead2Prev)) {
     drum2.noteOn();
   }
 
-  peakRead2_prev = peakRead2;
+  peakRead2Prev = peakRead2;
 
 }
 

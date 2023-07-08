@@ -41,8 +41,8 @@ void AudioEffectRingModulator::update(void)
   for (int i = 0; i < AUDIO_BLOCK_SAMPLES; i++) {
     int32_t a = blocka->data[i];
     int32_t b = blockb->data[i];
-    int32_t ringmod = (a * b) >> 15; //same as divide by 32767, attenuates
-    blocka->data[i] = ringmod;
+    int32_t ringMod = (a * b) >> 15; //same as divide by 32767, attenuates
+    blocka->data[i] = ringMod;
   }
 
   transmit(blocka);

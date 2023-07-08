@@ -1,5 +1,6 @@
 /* Audio Library for Teensy, Slew Limiter
  * Copyright (c) 2023, Matt Kuebrich
+ *
  * Based on Ivan Cohen's simplified version of the Befaco Slew Limiter VCV Rack module.
  * https://forum.juce.com/t/adc17-fifty-shades-of-distortion-homework-part-2/25174
  * 
@@ -34,13 +35,13 @@ class AudioEffectSlewLimiter : public AudioStream
   public:
     AudioEffectSlewLimiter() : AudioStream(1, inputQueueArray) { }
     virtual void update(void);
-    void rise(float rise_time) { this->rise_time = rise_time; }
-    void fall(float fall_time) { this->fall_time = fall_time; }
+    void rise(float riseTime) { this->riseTime = riseTime; }
+    void fall(float fallTime) { this->fallTime = fallTime; }
    
   private:
     audio_block_t *inputQueueArray[1];
-    float rise_time = 0.0f;
-    float fall_time = 0.0f;
+    float riseTime = 0.0f;
+    float fallTime = 0.0f;
     float out;
     float last = 0.0f; 
 };

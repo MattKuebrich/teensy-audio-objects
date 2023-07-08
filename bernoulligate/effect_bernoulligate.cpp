@@ -38,20 +38,20 @@ void AudioEffectBernoulliGate::update(void) {
   }
 
   int32_t gate = 0;
-  int32_t gate_prev = 0;
+  int32_t gatePrev = 0;
 
   for (int i = 0; i < AUDIO_BLOCK_SAMPLES; i++) {
     int32_t a = blocka->data[i];
     gate = (a > 0) ? 32767 : -32768;
 
-    if (gate_prev > 0 && gate <= 0) {
+    if (gatePrev > 0 && gate <= 0) {
       choice = (random(100) <= prob * 100) ? 0 : 1;
     }
 
     blocka->data[i] = (choice == 1) ? gate : -32768;
     blockb->data[i] = (choice == 1) ? -32768 : gate;
 
-    gate_prev = gate;
+    gatePrev = gate;
   }
 
   transmit(blocka, 0);

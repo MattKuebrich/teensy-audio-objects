@@ -1,9 +1,13 @@
-/* Audio Library for Teensy, Slew Limiter
+/* Audio Library for Teensy, Chaos Noise
  * Copyright (c) 2023, Matt Kuebrich
- *
- * Based on Ivan Cohen's simplified version of the Befaco Slew Limiter VCV Rack module.
- * https://forum.juce.com/t/adc17-fifty-shades-of-distortion-homework-part-2/25174
- * 
+ *  
+ * This is adapted on Paul Batchelor's chaosNoise algorithm from his sndkit audio toolkit
+ * (https://pbat.ch/sndkit/chaosnoise/) as well as Michael Hetrick's Crackle VCV Rack module.
+ * (https://github.com/mhetrick/hetrickcv/blob/master/src/Crackle.cpp).
+ *  
+ * Both of which are originally based on the Crackle UGen in Supercollider:
+ * (https://doc.sccode.org/Classes/Crackle.html).
+ *  
  * Permission is hereby granted, free of charge, to any person obtaining a copy
  * of this software and associated documentation files (the "Software"), to deal
  * in the Software without restriction, including without limitation the rights
@@ -23,33 +27,45 @@
  * THE SOFTWARE.
  */
 
-#include "effect_slewlimiter.h"
+#include "synth_chaosnoise.h"
 
-void AudioEffectSlewLimiter::update(void) {
+void AudioSynthChaosNoise::update(void) {
   audio_block_t *block;
 
-  block = receiveReadOnly(0);
+  block = allocate();
   if (block == NULL) return;
 
-  float slewMin = 0.1f;  // Minimum slope in volts per second
-  float slewMax = 10000.f; // Maximum slope in volts per second
-
-  float Ts = 1.0f / AUDIO_SAMPLE_RATE_EXACT;
-  int16_t slewRise = (int16_t)(slewMax * Ts * powf(slewMin / slewMax, riseTime) * 32768.0f);
-  int16_t slewFall = (int16_t)(slewMax * Ts * powf(slewMin / slewMax, fallTime) * 32768.0f);
-
   for (int i = 0; i < AUDIO_BLOCK_SAMPLES; i++) {
-    int16_t input = block->data[i];
 
-    if (input > last) {
-      out = min(input, out + slewRise);
-    }
-    else {
-      out = max(input, out - slewFall);
+    //CLASSIC mode
+    if (chaosMode == 0) {
+      phs += floor(sampleRate * maxlens);
+      if (phs >= PHSMAX) {
+        phs &= PHSMSK;
+
+        float y_new;
+        y_new = fabs(chaosAmt * y0 - y1 - 0.05);
+        y1 = y0;
+        y0 = y_new;
+      }
+      block->data[i] = y0 * 32767;
     }
 
-    last = out;
-    block->data[i] = out;
+    //BROKEN mode
+    if (chaosMode == 1) {
+      //broken mode
+      phs += floor(sampleRate * maxlens);
+      float y0 = fabs(y1 * chaosAmt - y2 - 0.05f);
+
+      if (phs >= PHSMAX) {
+        phs &= PHSMSK;
+        y2 = y1;
+      }
+      y1 = lasty1;
+      lasty1 = constrain(y0, -1.0f, 1.0f);
+      block->data[i] = y0 * 32767;
+    }
+
   }
 
   transmit(block);

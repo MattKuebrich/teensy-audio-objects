@@ -1,11 +1,11 @@
 /* Slew limiter example
 
-  POT01 = Triangle oscillator frequency
-  POT02 = Sample and hold oscillator frequency
-  POT03 = Slew limiter rise time
-  POT04 = Slew limiter fall time
+This uses the slew limiter as a way to add portamento. As the rise and fall times are turned up, the notes begin to glide between each other.
 
-  This uses the slew limiter as a way to add portamento. As the rise and fall times are turned up, the notes begin to glide between each other.
+POT01 = Triangle oscillator frequency
+POT02 = Sample and hold oscillator frequency
+POT03 = Slew limiter rise time
+POT04 = Slew limiter fall time
 
 */
 
@@ -27,10 +27,10 @@ float oscFreq, shFreq, riseTime, fallTime;
 // GUItool: begin automatically generated code
 AudioSynthWaveformModulated osc;   //xy=319.6666488647461,560.3333024978638
 AudioSynthWaveformModulated sh;   //xy=319.6666488647461,560.3333024978638
-AudioEffectSlewLimiter slewlimiter;            //xy=156.2222023010254,382.88888359069824
+AudioEffectSlewLimiter slewLimiter;            //xy=156.2222023010254,382.88888359069824
 AudioOutputI2S           i2s1;           //xy=792.8889045715332,396.22222328186035
-AudioConnection          patchCord1(sh, 0, slewlimiter, 0);
-AudioConnection          patchCord2(slewlimiter, 0, osc, 0);
+AudioConnection          patchCord1(sh, 0, slewLimiter, 0);
+AudioConnection          patchCord2(slewLimiter, 0, osc, 0);
 AudioConnection          patchCord3(osc, 0, i2s1, 0);
 AudioConnection          patchCord4(osc, 0, i2s1, 1);
 AudioControlSGTL5000     sgtl5000_1;     //xy=1284,1411
@@ -54,8 +54,8 @@ void loop() {
 
   osc.frequency(oscFreq);
   sh.frequency(shFreq);
-  slewlimiter.rise(riseTime);
-  slewlimiter.fall(fallTime);
+  slewLimiter.rise(riseTime);
+  slewLimiter.fall(fallTime);
 }
 
 

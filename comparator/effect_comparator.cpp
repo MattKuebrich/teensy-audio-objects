@@ -45,25 +45,25 @@ void AudioEffectComparator::update(void)
     int16_t b = blockb->data[i];
 
     //LESS
-    if (compare_mode == 0){
+    if (compareMode == 0){
     if(a < b){a = 32767;}
     else {a = 0;}
     }
 
     //GREATER
-    if (compare_mode == 1){
+    if (compareMode == 1){
     if(a > b){a = 32767;}
     else {a = 0;}
     }
 
     //EQUAL
-    if (compare_mode == 2){
+    if (compareMode == 2){
     if(a == b){a = 32767;}
     else {a = 0;}
     }
 
     //NOT_EQUAL
-    if (compare_mode == 3){
+    if (compareMode == 3){
     if(a != b){a = 32767;}
     else {a = 0;}
     }
