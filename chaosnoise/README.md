@@ -8,15 +8,23 @@ The even noisier "broken" mode was adapted from Michael Hetrick's [Crackle VCV R
 
 Both of those projects are originally based on the [Crackle UGen in Supercollider](https://doc.sccode.org/Classes/Crackle.html).
 
-### Functions
-``chaos(amount);``
+## Audio Connections
 
-``rate(freq);``
+| Port  | Purpose |
+| ----- | ------- |
+| Out 0  | Chaos Noise  |
 
-``mode(mode);``
+
+## Functions
+### **chaos**(amount);
+Set the chaos amount, from 0.0 to 1.0.
+
+### **rate**(freq);
+Set the rate of the noise is processed, which changes the tone quality / pitch of the noise.
+
+### **mode**(mode);
+Set the chaos noise mode.
 
 Supported modes:
 * CLASSIC
 * BROKEN
-
-
