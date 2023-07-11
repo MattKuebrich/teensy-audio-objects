@@ -1,4 +1,4 @@
-## Chaos Noise
+# Chaos Noise
 
 This is a chaotic noise generator which creates vinyl-like hiss, static and pops. 
 
