@@ -9,6 +9,7 @@ The example .ino sketches assume you're using a Teensy 3.x or 4.x with the [Teen
 * [Bernoulli Gate](https://github.com/MattKuebrich/teensy-audio-objects/tree/main/bernoulligate)
 * [Chaos Noise](https://github.com/MattKuebrich/teensy-audio-objects/tree/main/chaosnoise)
 * [Comparator](https://github.com/MattKuebrich/teensy-audio-objects/tree/main/comparator)
+* [Gate to Trigger](https://github.com/MattKuebrich/teensy-audio-objects/tree/main/gatetotrigger)
 * [Ring Modulator](https://github.com/MattKuebrich/teensy-audio-objects/tree/main/ringmodulator)
 * [Sample and Hold](https://github.com/MattKuebrich/teensy-audio-objects/tree/main/samplehold)
 * [Slew Limiter](https://github.com/MattKuebrich/teensy-audio-objects/tree/main/slewlimiter)
