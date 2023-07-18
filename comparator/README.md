@@ -10,8 +10,8 @@ This comparator has 2 inputs and compares them with different operations. It out
 | Out 0  | Compared Output  |
 
 ## Functions
-``mode(mode);``
 ### **mode**(mode);
+
 
 Supported modes:
 * LESS
