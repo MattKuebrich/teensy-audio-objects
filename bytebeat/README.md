@@ -29,7 +29,7 @@ Includes all four bytebeat equation banks from the awesome [Equation Composer](h
 ## Functions
 ### **formula**(function);
 Set the bytebeat formula. This should be a function in your sketch that that returns the bytebeat formula. For example:
-``uint32_t myformula(uint32_t t, uint8_t w, uint32_t p1, uint32_t p2, uint32_t p3) { return (sin(t) * 1e7 & 255); }``       
+``uint32_t myformula(uint32_t t, uint8_t w, uint32_t p1, uint32_t p2, uint32_t p3) { return (t*(-(t>>8|t|t>>9|t>>13)))^t; }``       
 
 ### **sampleRate**(freq);
 Set the sample rate (pitch) of the bytebeat equation. Some equations you find on the web will require a specific sample rate to sound "correct". The default sample rate is 8000.
