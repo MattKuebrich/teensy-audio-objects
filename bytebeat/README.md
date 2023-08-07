@@ -1,19 +1,23 @@
 # Bytebeat
 
-Bytebeats are pieces of glitchy lo-fi music created by defining a waveform as a function of time using a single-line formula.[This beginner's guide from Tuesday Night Machines](https://nightmachines.tv/downloads/Bytebeats_Beginners_Guide_TTNM_v1-5.pdf) is a great introduction and [Bytebeat Composer](https://dollchan.net/bytebeat) is an easy way to experiment with bytebeats in your browser. 
+Bytebeats are pieces of glitchy lo-fi music created by defining a waveform as a function of time using a single-line formula. [This beginner's guide from Tuesday Night Machines](https://nightmachines.tv/downloads/Bytebeats_Beginners_Guide_TTNM_v1-5.pdf) is a great introduction and [Bytebeat Composer](https://dollchan.net/bytebeat) is an easy way to experiment with bytebeats in your browser. 
 
-The parameters p1, p2 and p3 can be used in the bytebeat formula and set inside your sketch. You could (as in the example sketch) control p1, p2 and p3 with potentiometers. The variable w can also be used within the formula and represented the previous bytebeat output. This can be used to create recursive formulas. This object only uses the classic "C-compatible" flavor of bytebeat equations. Equations written in Javascript won't work.
+The parameters p1, p2 and p3 can be used in the bytebeat formula and set inside your sketch. You could control p1, p2 and p3 with potentiometers, as in some of the example sketches below. 
 
-I've written 3 sketches to demonstrate how to use this by bytebeat audio object.
+The variable w can also be used within the formula and represented the previous bytebeat output. This can be used to create recursive formulas. 
 
-[bytebeat_simple](https://github.com/MattKuebrich/teensy-audio-objects/tree/main/bytebeat/bytebeat_simple)
+This object only uses the classic "C-compatible" flavor of bytebeat equations. Equations written in Javascript won't work.
+
+I've written 3 sketches to demonstrate how to use this bytebeat audio object:
+
+[bytebeat_simple](https://github.com/MattKuebrich/teensy-audio-objects/tree/main/bytebeat/bytebeat_simple)<br>
 Simply plays a single bytebeat.
 
-[bytebeat_5formula](https://github.com/MattKuebrich/teensy-audio-objects/tree/main/bytebeat/bytebeat_5formula)
+[bytebeat_5formula](https://github.com/MattKuebrich/teensy-audio-objects/tree/main/bytebeat/bytebeat_5formula)<br>
 Generates bytebeats with 5 selectable formulas, sample rate, parameters, reset and reverse functions.
 
-[bytebeat_equationcomposer]([bytebeat_5formula](https://github.com/MattKuebrich/teensy-audio-objects/tree/main/bytebeat/bytebeat_equationcomposer)
-Includes all four bytebeat equation banks from the Equation Composer Eurorack module by Microbe Modular (with permission from creator Bret Truchan). 
+[bytebeat_equationcomposer](https://github.com/MattKuebrich/teensy-audio-objects/tree/main/bytebeat/bytebeat_equationcomposer)<br>
+Includes all four bytebeat equation banks from the awesome [Equation Composer](https://github.com/clone45/EquationComposer) Eurorack module by Microbe Modular. Used with permission from creator Bret Truchan. 
 
 ## Audio Connections
 
