@@ -7,6 +7,7 @@ The example .ino sketches assume you're using a Teensy 3.x or 4.x with the [Teen
 **Completed Audio Objects:**
 
 * [Bernoulli Gate](https://github.com/MattKuebrich/teensy-audio-objects/tree/main/bernoulligate)
+* [Bytebeat](https://github.com/MattKuebrich/teensy-audio-objects/tree/main/bytebeat)
 * [Chaos Noise](https://github.com/MattKuebrich/teensy-audio-objects/tree/main/chaosnoise)
 * [Comparator](https://github.com/MattKuebrich/teensy-audio-objects/tree/main/comparator)
 * [Gate to Trigger](https://github.com/MattKuebrich/teensy-audio-objects/tree/main/gatetotrigger)
@@ -15,7 +16,6 @@ The example .ino sketches assume you're using a Teensy 3.x or 4.x with the [Teen
 * [Slew Limiter](https://github.com/MattKuebrich/teensy-audio-objects/tree/main/slewlimiter)
 
 **In Development:**
-* Bytebeat
 * Distortion
 * Envelope Follower
 * Limiter
