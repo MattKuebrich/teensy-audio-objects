@@ -31,17 +31,11 @@ uint32_t formula1(uint32_t t, uint8_t w, uint32_t p1, uint32_t p2, uint32_t p3) 
 
 uint32_t formula2(uint32_t t, uint8_t w, uint32_t p1, uint32_t p2, uint32_t p3) {
   //ststututterter
-  //return ((t * (-(t >> p1 / 12 | t | t >> p2 / 12 | t >> p3 / 13)))^t);
-  
-  //techno
-  p1 = map(p1, 0, 1023, 0, 3000);
-  p2 = map(p2, 0, 1023, 5, 10);
-  p3 = map(p3, 0, 1023, 0, 10);
-  return t&(592)?t>>p1:t>>p2&t>>p2&(t*29)<<t|t/p3>>p2;  
+  return ((t * (-(t >> p1 / 12 | t | t >> p2 / 12 | t >> p3 / 13)))^t);
 }
 
 uint32_t formula3(uint32_t t, uint8_t w, uint32_t p1, uint32_t p2, uint32_t p3) {
-  //remappiung ranges 
+  //remapping ranges 
   p1 = map(p1, 0, 1023, 0, 128);
   p2 = map(p2, 0, 1023, 0, 10);
   p3 = map(p3, 0, 1023, 0, 10);
