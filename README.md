@@ -16,8 +16,9 @@ The example .ino sketches assume you're using a Teensy 3.x or 4.x with the [Teen
 * [Slew Limiter](https://github.com/MattKuebrich/teensy-audio-objects/tree/main/slewlimiter)
 
 **In Development:**
-* Distortion
+* Function Shaper
 * Envelope Follower
 * Limiter
 * Quantizer
+* Readout
 * Shift Register / Rungler
