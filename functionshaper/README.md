@@ -2,7 +2,7 @@
 
 This object modifies the waveshape of an input signal to generate distortion, clipping, bitcrushing, fuzz, and other gnarly effects. You pass it a waveshaping function directly, unlike existing [waveshaper](https://www.pjrc.com/teensy/gui/?info=AudioEffectWaveshaper) Teensy object, which uses lookup tables. Many formulas can be found on the web (on sites such as [musicdsp.org](https://www.musicdsp.org/)) and easily implemented. The example sketch contains 20 of them. 
 
-When writing the shaper function, the variable ``x `` represents the input. 
+When writing the shaper function, the variable ``x`` represents the input. 
 
 Parameters (or coefficients) ``a``, ``b`` and ``c`` can be used in the shaper function and set inside your sketch. For example, you could set up potentiometers to adjust these parameters. 
 
