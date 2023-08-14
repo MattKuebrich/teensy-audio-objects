@@ -10,13 +10,13 @@ The example .ino sketches assume you're using a Teensy 3.x or 4.x with the [Teen
 * [Bytebeat](https://github.com/MattKuebrich/teensy-audio-objects/tree/main/bytebeat)
 * [Chaos Noise](https://github.com/MattKuebrich/teensy-audio-objects/tree/main/chaosnoise)
 * [Comparator](https://github.com/MattKuebrich/teensy-audio-objects/tree/main/comparator)
+* [Function Shaper](https://github.com/MattKuebrich/teensy-audio-objects/tree/main/functionshaper)
 * [Gate to Trigger](https://github.com/MattKuebrich/teensy-audio-objects/tree/main/gatetotrigger)
 * [Ring Modulator](https://github.com/MattKuebrich/teensy-audio-objects/tree/main/ringmodulator)
 * [Sample and Hold](https://github.com/MattKuebrich/teensy-audio-objects/tree/main/samplehold)
 * [Slew Limiter](https://github.com/MattKuebrich/teensy-audio-objects/tree/main/slewlimiter)
 
 **In Development:**
-* Function Shaper
 * Envelope Follower
 * Limiter
 * Quantizer
