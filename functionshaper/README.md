@@ -47,7 +47,7 @@ Set the ``a`` parameter in the shaper.
 Set the ``b`` parameter in the shaper.
 
 ### **parameterC**(amount);
-Set the ``c`` parameters in the shaper.
+Set the ``c`` parameter in the shaper.
 
 ### **mix**(level);
 Sets the mix between the input signal (dry) and the waveshaped signal (wet). 0.0 is 100% dry and 1.0 is 100% wet. Default is 1.0. 
