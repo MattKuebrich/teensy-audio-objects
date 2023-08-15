@@ -8,7 +8,7 @@ This is useful for modulating values that you can only set from within the sketc
 
 | Port  | Purpose |
 | ----- | ------- |
-| In 0  | Signal to analyze |
+| In 0  | Signal to readout |
 
 ## Functions
 
