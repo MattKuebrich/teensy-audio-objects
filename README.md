@@ -1,6 +1,6 @@
 # teensy-audio-objects
 
-These are a few simple audio objects I've written for the [Teensy Audio Library](https://www.pjrc.com/teensy/td_libs_Audio.html). I should mention I don't _really_ know what I'm doing, but these have been useful in my own synth DIY projects and a fun challenge.
+These are simple audio objects I've written for the [Teensy Audio Library](https://www.pjrc.com/teensy/td_libs_Audio.html). I should mention I don't _really_ know what I'm doing, but these have been useful in my own synth DIY projects and a fun challenge.
 
 The example .ino sketches assume you're using a Teensy 3.x or 4.x with the [Teensy Audio Adapter](https://www.pjrc.com/store/teensy3_audio.html) and have a few potentiometers connected. 
 
@@ -13,6 +13,7 @@ The example .ino sketches assume you're using a Teensy 3.x or 4.x with the [Teen
 * [Function Shaper](https://github.com/MattKuebrich/teensy-audio-objects/tree/main/functionshaper)
 * [Gate to Trigger](https://github.com/MattKuebrich/teensy-audio-objects/tree/main/gatetotrigger)
 * [Readout](https://github.com/MattKuebrich/teensy-audio-objects/tree/main/readout)
+* [Quantizer](https://github.com/MattKuebrich/teensy-audio-objects/tree/main/quantizer)
 * [Ring Modulator](https://github.com/MattKuebrich/teensy-audio-objects/tree/main/ringmodulator)
 * [Sample and Hold](https://github.com/MattKuebrich/teensy-audio-objects/tree/main/samplehold)
 * [Slew Limiter](https://github.com/MattKuebrich/teensy-audio-objects/tree/main/slewlimiter)
@@ -21,6 +22,5 @@ The example .ino sketches assume you're using a Teensy 3.x or 4.x with the [Teen
 * Bitbeat?
 * Envelope Follower
 * Limiter
-* Quantizer
 * Shift Register / Rungler
 

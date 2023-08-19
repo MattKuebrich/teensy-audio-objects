@@ -1,4 +1,4 @@
-/* Readout example, added available
+/* Readout example
 
    This object simply reads an input and outputs the same signal back to the sketch as a (-1.0 to 1.0) float.
    You check if data is available using available() and retreive the value using read(). It's very similar 
