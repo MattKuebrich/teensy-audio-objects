@@ -1,6 +1,6 @@
 # Quantizer
 
-This quantizer is based on Jeremy Wentworth's VCV Rack Quantizer. The user defines scales within the sketch. 
+This quantizer is based on [Jeremy Wentworth's VCV Rack Quantizer](https://github.com/jeremywen/JW-Modules#quantizer). The user defines scales within the sketch. 
 
 ## Audio Connections
 
@@ -12,7 +12,7 @@ This quantizer is based on Jeremy Wentworth's VCV Rack Quantizer. The user defin
 
 ## Functions
 ### **scale**(array, length);
-The scale you want to use an array, along with its length. The scale uses the "pitch class set" format. The numbers in the array represent the semitone intervals between each note of the scale. The array must global or static, otherwise it won't work.
+The scale you want to use an array, along with its length. The scale uses the "pitch class set" format. The numbers in the array represent the semitone intervals between each note of the scale. The array must global or static, otherwise it won't work. This is a float array, so you can use fractional semitones to get microtonal scales. 
 
 You define the scale like this:
 ```
