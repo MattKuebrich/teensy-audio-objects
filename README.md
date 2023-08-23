@@ -17,10 +17,10 @@ The example .ino sketches assume you're using a Teensy 3.x or 4.x with the [Teen
 * [Ring Modulator](https://github.com/MattKuebrich/teensy-audio-objects/tree/main/ringmodulator)
 * [Sample and Hold](https://github.com/MattKuebrich/teensy-audio-objects/tree/main/samplehold)
 * [Slew Limiter](https://github.com/MattKuebrich/teensy-audio-objects/tree/main/slewlimiter)
+* [Shift Register / Rungler](https://github.com/MattKuebrich/teensy-audio-objects/tree/main/shiftregister)
 
 **In Development:**
 * Bitbeat?
 * Envelope Follower
 * Limiter
-* Shift Register / Rungler
 
