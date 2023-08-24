@@ -22,6 +22,9 @@
  * OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
  * THE SOFTWARE.
  */
+
+#ifndef effect_shiftregister_h
+#define effect_shiftregister_h
  
 #include <Arduino.h>
 #include "AudioStream.h"
@@ -75,4 +78,7 @@ class AudioEffectShiftRegister : public AudioStream
     short loopOn = 0;
     short xorOn = 0;
     int16_t audioIn, prevTrig, trig, xorResult;
+    int16_t dacOut = 0;
 };
+
+#endif

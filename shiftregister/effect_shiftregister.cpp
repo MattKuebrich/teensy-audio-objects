@@ -32,7 +32,7 @@ void AudioEffectShiftRegister::update(void)
   audio_block_t *blocka, *blockb, *block0, *block1, *block2, *block3, *block4, *block5, *block6, *block7;
   int16_t *pa, *pb, *p0, *p1, *p2, *p3, *p4, *p5, *p6, *p7, *end;
   static short change;
-  uint16_t dacOut, bit0, bit1, bit2, bit3, bit4, bit5, bit6, bit7;
+  uint16_t bit0, bit1, bit2, bit3, bit4, bit5, bit6, bit7;
   uint16_t selectedOut;
 
   blocka = receiveWritable(0);
@@ -121,8 +121,8 @@ void AudioEffectShiftRegister::update(void)
 
     }
 
-    // this prints out every bit from srByte, for debugging.
-    //for ( int8_t i = 7; i >= 0; i-- )
+    //  this prints out every bit from srByte, for debugging.
+    //  for ( int8_t i = 7; i >= 0; i-- )
     //  Serial.print( bitRead( srByte, i ) );
 
 /*
