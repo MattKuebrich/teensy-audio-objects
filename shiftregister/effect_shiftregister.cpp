@@ -74,16 +74,16 @@ void AudioEffectShiftRegister::update(void)
   p5 = (int16_t *)(block5->data);
   p6 = (int16_t *)(block6->data);
   p7 = (int16_t *)(block7->data);
-  audio_in = *pa;
+  audioIn = *pa;
 
   end = (pa + AUDIO_BLOCK_SAMPLES);
 
   while (pa < end) {
 
-    prev_trig = trig;
+    prevTrig = trig;
     trig = *pb++;
 
-    if (prev_trig >= 0 && trig < 0) {
+    if (prevTrig >= 0 && trig < 0) {
       change = 1;
     }
 
@@ -91,16 +91,16 @@ void AudioEffectShiftRegister::update(void)
       change = 0;
     }
 
-    if (change == 1 && audio_in >= 0) { // if clock and audio are both high...
+    if (change == 1 && audioIn >= 0) { // if clock and audio are both high...
       srByte = srByte << 1; //we shift bit...
 
       // Trying to have the input be XOR'd with the last stage of the shift register, as in the rungler. 
       // I'm not sure if this is working correctly, but you can sometimes hear a difference.
       
       if (xorOn) {
-        xorResult = bitRead(srByte, 7) ^ (audio_in >= 0);
+        xorResult = bitRead(srByte, 7) ^ (audioIn >= 0);
       } else {
-        xorResult = audio_in;
+        xorResult = audioIn;
       }
 
       if (loopOn) {
@@ -110,7 +110,7 @@ void AudioEffectShiftRegister::update(void)
       }
     }
 
-    if (change == 1 && audio_in < 0) { //if clock if high, but audio is not
+    if (change == 1 && audioIn < 0) { //if clock if high, but audio is not
       srByte = srByte << 1; //shift bit..
 
       if (loopOn) {

@@ -74,5 +74,5 @@ class AudioEffectShiftRegister : public AudioStream
     uint8_t srByte = 0; //byte used for 8 shift register bits
     short loopOn = 0;
     short xorOn = 0;
-    int16_t audio_in, prev_trig, trig, xorResult;
+    int16_t audioIn, prevTrig, trig, xorResult;
 };
