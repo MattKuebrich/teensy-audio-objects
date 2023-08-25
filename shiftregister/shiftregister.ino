@@ -123,14 +123,14 @@ void loop() {
   //rungler going into OscBfreq
   osc_b_cv.gain(0, rungler_to_osc_b);
 
-  //enable looping
+  //enable xor feedback
   if (pot05.getValue() < 512) {
     rungler_a.xorEnable(0);
   } else {
     rungler_a.xorEnable(1);
   }
 
-  // enable xor feedback
+  // enable looping
   if (pot06.getValue() < 512) {
     rungler_a.loopEnable(0);
   } else {
