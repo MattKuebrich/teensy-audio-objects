@@ -10,6 +10,7 @@ The example .ino sketches assume you're using a Teensy 3.x or 4.x with the [Teen
 * [Bytebeat](https://github.com/MattKuebrich/teensy-audio-objects/tree/main/bytebeat)
 * [Chaos Noise](https://github.com/MattKuebrich/teensy-audio-objects/tree/main/chaosnoise)
 * [Comparator](https://github.com/MattKuebrich/teensy-audio-objects/tree/main/comparator)
+* [Dust](https://github.com/MattKuebrich/teensy-audio-objects/tree/main/dust)
 * [Function Shaper](https://github.com/MattKuebrich/teensy-audio-objects/tree/main/functionshaper)
 * [Gate to Trigger](https://github.com/MattKuebrich/teensy-audio-objects/tree/main/gatetotrigger)
 * [Readout](https://github.com/MattKuebrich/teensy-audio-objects/tree/main/readout)
