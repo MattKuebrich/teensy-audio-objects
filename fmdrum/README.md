@@ -22,13 +22,13 @@ Note: This is pretty similar to the [SimpleDrum](https://www.pjrc.com/teensy/gui
 Trigger the drum.
 
 ### **frequency**(freq);
-Set the frequency in hz. Default is 50hz.
+Set the base drum frequency in hz. Default is 50hz.
 
 ### **fm**(amount);
-Set the fm amount, from 0 to 1.0. Default is 0.
+Set the fm intensity, from 0 to 1.0. Default is 0.
 
 ### **decay**(amount);
-Set the decay amount, from 0 to 1.0.  Default is 0.75.
+Set the FM and AM envelope decay time, from 0 to 1.0.  Default is 0.75.
 
 ### **noise**(amount);
 Set the noise amount, from 0 to 1.0. Default is 0.
