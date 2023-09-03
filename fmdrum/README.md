@@ -3,7 +3,7 @@
 This is a modified version of [mxmxmx's Teensy port](https://github.com/mxmxmx/minitrash/blob/master/soft/libraries/Audio/synth_fm_drum.cpp) of the FM Drum mode from the Mutable Instruments Peaks Eurorack module.
 
 ### Updates:
-* The drum can be triggered with noteOn() or with a trigger at the first input. 
+* The drum can be triggered with ``noteOn()`` or with a trigger at the first input. 
 * The functions have been updated to take more typical value ranges for the Teensy Audio Library.
 * On the Peaks module, noise and overdrive were combined in one knob. I've separated them so they can be set independently.
 
