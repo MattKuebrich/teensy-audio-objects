@@ -2,7 +2,7 @@
 
 This object generates randomly spaced impulses with random amplitudes. 
 
-This was adapted from Michael Hetrick's [Dust VCV Rack module] (https://github.com/mhetrick/hetrickcv/blob/master/src/Dust.cpp), which was based on the [Dust UGen in Supercollider](https://doc.sccode.org/Classes/Dust.html).
+This was adapted from Michael Hetrick's [Dust VCV Rack module](https://github.com/mhetrick/hetrickcv/blob/master/src/Dust.cpp), which was based on the [Dust UGen in Supercollider](https://doc.sccode.org/Classes/Dust.html).
 
 ## Audio Connections
 
