@@ -1,7 +1,7 @@
 /* Audio Library for Teensy, DC Block
  * Copyright (c) 2023, Matt Kuebrich
  * 
- * This is adapted from "Tim's Quicker DC Blocker" by Tim Wescott.
+ * This was adapted from "Tim's Quicker DC Blocker" by Tim Wescott.
  *
  * I can't find where the code first originated (maybe on the defunct comp.dsp Google group),
  * but it's been reposted here by Robert Bristow-Johnson, about halfway down the page.
