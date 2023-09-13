@@ -22,7 +22,7 @@ Note: This is pretty similar to the [SimpleDrum](https://www.pjrc.com/teensy/gui
 Trigger the drum.
 
 ### **frequency**(freq);
-Set the frequency in hz. Default is 50hz.
+Set the frequency in Hz. Default is 50Hz.
 
 ### **fm**(amount);
 Set the fm amount, from 0 to 1.0. Default is 0.
