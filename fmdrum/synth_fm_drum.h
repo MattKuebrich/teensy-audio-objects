@@ -124,10 +124,11 @@ class AudioSynthFMDrum : public AudioStream
     uint32_t am_envelope_phase_;
     uint32_t aux_envelope_phase_;
     uint32_t phase_increment_;
-    uint16_t clkin;
+    int16_t clkin;
     uint8_t trig = 0;
     uint8_t noteOnTrig;
     uint8_t prevnoteOnTrig;
+    int16_t triggerThreshold = 0.2 * 32767.0f; ; //a typical 2 "volts" threshold, if we consider the whole range a 10v p2p signal
 };
 
 #endif

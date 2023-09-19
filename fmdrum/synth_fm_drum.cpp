@@ -153,7 +153,7 @@ void AudioSynthFMDrum::update(void)
       noteOnTrig = 0;
     }
 
-    if (clkin > 32767) {
+    if (clkin > triggerThreshold) {
       trig = 1;
     } else {
       trig = 0;
