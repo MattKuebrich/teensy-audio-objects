@@ -1,6 +1,15 @@
 # STK Effect
 
-This is a wrapper of all 8 [STK Effects](https://ccrma.stanford.edu/software/stk/classstk_1_1Effect.html) from [The Synthesis ToolKit in C++ (STK)](https://ccrma.stanford.edu/software/stk/) by Perry R. Cook & Gary P. Scavone. It includes chorus, echo, reverb and pitch shifting effects.
+This is a wrapper of all 8 [STK Effects](https://ccrma.stanford.edu/software/stk/classstk_1_1Effect.html) from [The Synthesis ToolKit in C++ (STK)](https://ccrma.stanford.edu/software/stk/) by Perry R. Cook & Gary P. Scavone. It includes:
+
+* [Chorus](https://ccrma.stanford.edu/software/stk/classstk_1_1Chorus.html)
+* [Echo](https://ccrma.stanford.edu/software/stk/classstk_1_1Echo.html)
+* [JCRev](https://ccrma.stanford.edu/software/stk/classstk_1_1FreeVerb.html) - reverb developed by developed by John Chowning
+* [NRev](https://ccrma.stanford.edu/software/stk/classstk_1_1NRev.html) - reverb by CCRMA
+* [PRCRev](https://ccrma.stanford.edu/software/stk/classstk_1_1PRCRev.html) - reverb by Perry Cook
+* [FreeVerb](https://ccrma.stanford.edu/software/stk/classstk_1_1FreeVerb.html) reverb by Jezar at Dreampoint
+* [PitShift](https://ccrma.stanford.edu/software/stk/classstk_1_1PitShift.html) - simple pitch shifter
+* [LentPitShift](https://ccrma.stanford.edu/software/stk/classstk_1_1LentPitShift.html) - pitch shifter based on the Lent algorith by Francois Germain
 
 Instead of the original STK files, I'm using Phil Schatzmann's [The Synthesis ToolKit in C++ (STK) Library for Arduino](https://github.com/pschatzmann/arduino-stk) as the basis for this.
 
@@ -8,7 +17,7 @@ Instead of the original STK files, I'm using Phil Schatzmann's [The Synthesis To
 I know, a version of FreeVerb is already part of the Teensy Audio Library, although the STK version here differs in a few ways. It supports stereo input (and stereo output) and has the extra "width" and "freeze" functions. That said, unlike the Teensy version, it's unoptimized. On my Teensy 4.1, it uses 8.6% CPU vs 5.4% while using the stock (AudioEffectFreeverbStereo) effect.
 
 ## LentPitShift issue
-LentPitShift doesn't work well and spikes the CPU near 100%. That said, it also doesn't run well using STK on my computer either. I'm keeping it here for completeness and in case anyone want to make it better. 
+LentPitShift doesn't work well and spikes the CPU near 100% on a Teensy 4.1. That said, it also doesn't run well using STK on my computer either. I'm keeping it here for completeness and in case anyone want to make it better. 
 
 ## Audio Connections
 
@@ -36,14 +45,14 @@ Select which effect to use by name (see below). Since we don't want to take up m
 If you'd like to use multiple STK effects in a sketch, you can create more than one instance of the STK Effect audio object.
 
 Effects: <br>
-[CHORUS](https://ccrma.stanford.edu/software/stk/classstk_1_1Chorus.html)<br>
-[ECHO](https://ccrma.stanford.edu/software/stk/classstk_1_1Echo.html)<br>
-[FREEVERB](https://ccrma.stanford.edu/software/stk/classstk_1_1FreeVerb.html)<br>
-[JCREV](https://ccrma.stanford.edu/software/stk/classstk_1_1JCRev.html)<br>
-[LENPITSHIFT](https://ccrma.stanford.edu/software/stk/classstk_1_1LentPitShift.html)<br>
-[NREV](https://ccrma.stanford.edu/software/stk/classstk_1_1NRev.html)<br>
-[PRCREV](https://ccrma.stanford.edu/software/stk/classstk_1_1PRCRev.html)<br>
-[PITSHIFT](https://ccrma.stanford.edu/software/stk/classstk_1_1PitShift.html)<br>
+CHORUS<br>
+ECHO<br>
+JCREV<br>
+NREV<br>
+PRCREV<br>
+FREEVERB<br>
+PITSHIFT<br>
+LENPITSHIFT<br>
 
 ### **mix**(level);
 Set the mixture of input and "effected" levels in the output from 0.0 to 1.0. This applies to all effects.
