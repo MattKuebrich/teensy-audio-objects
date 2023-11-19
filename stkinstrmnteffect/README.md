@@ -1,4 +1,4 @@
-_STK Instrmnt and STK Effect are separate Teensy audio objects, but they share files so it makes sense to package them together._
+_STK Instrmnt and STK Effect are separate Teensy audio objects, but they share files so it makes sense to package them together. The example .ino uses both._
 
 Jump to [STK Instrmnt](#instrmnt)<br>
 Jump to [STK Effect](#effect)
