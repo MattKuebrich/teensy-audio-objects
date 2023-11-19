@@ -5,8 +5,8 @@ STK Effect is a wrapper of all 8 STK Effects. It includes chorus, echo, reverb a
 
 Although both are separate Teensy audio objects, they share files so it makes sense to package them together. 
 
-[STK Effect documentation](STKEffect.md)<br>
-[STK Instrmnt documentation](STKInstrmnt.md)
+[STK Effect README](README-STKEffect.md)<br>
+[STK Instrmnt README](README-STKInstrmnt.md)
 
 
 
