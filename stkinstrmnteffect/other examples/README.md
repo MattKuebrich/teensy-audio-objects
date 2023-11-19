@@ -1,0 +1,1 @@
+This example allows you to try all 8 STK effects. Remove the "_alleffects" part from the filename and move it to the root directory in place of the existing stkinstrmnteffect.ino. 
