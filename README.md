@@ -21,7 +21,7 @@ The example .ino sketches assume you're using a Teensy 3.x or 4.x with the [Teen
 * [Sample and Hold](https://github.com/MattKuebrich/teensy-audio-objects/tree/main/samplehold)
 * [Shift Register / Rungler](https://github.com/MattKuebrich/teensy-audio-objects/tree/main/shiftregister)
 * [Slew Limiter](https://github.com/MattKuebrich/teensy-audio-objects/tree/main/slewlimiter)
-* [STK Effect](https://github.com/MattKuebrich/teensy-audio-objects/tree/main/stkeffect)
+* [STK Instrmnt / STK Effect](https://github.com/MattKuebrich/teensy-audio-objects/tree/main/stkinstrmnteffect)
 
 **In Development:**
 * Bitbeat?
