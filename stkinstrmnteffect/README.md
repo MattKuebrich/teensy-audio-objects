@@ -19,7 +19,7 @@ The original STK code work mostly with MIDI value ranges (0 - 127). To adhere to
 In order to enable polyphony by default, I've used STK's [Voicer](https://ccrma.stanford.edu/software/stk/classstk_1_1Voicer.html) class within the audio object. Make sure to adjust the instrument level with volume() so clipping doesn't occur. These instruments can use hefty amounts of CPU, especially when using many polyphonic voices. 
 
 ### Extra Instruments
-I've also included 5 instruments not originally part of the Instrmnt class in STK. KrstlChr, FrencHrn, and HnkyTonk are Yamaha TX81Z patches that were ported to ChucK by Perry Cook in "STK-style", so I've adapted those to work here as well. I also took a stab myself at porting the the classic "Lately Bass" patch from the TX81Z, but it needs some work. :/
+I've also included 5 instruments not originally part of the Instrmnt class in STK. KrstlChr, FrencHrn, and HnkyTonk are Yamaha TX81Z patches that were [ported to ChucK by Perry Cook in "STK-style"](https://chuck.cs.princeton.edu/doc/reference/ugens-stk.html#KrstlChr), so I've adapted those to work here as well. I also took a stab myself at porting the the classic "Lately Bass" patch from the TX81Z, but it needs some work. :/
 
 Additionally, I included the [Guitar instrument from STK](https://ccrma.stanford.edu/software/stk/classstk_1_1Guitar.html), which according to the STK documentation "does not inherit from stk::Instrmnt because of API inconsistencies". To make polyphony work for Guitar, I created a modified version of Voicer, so this should work similar to the other instruments. The original Guitar STK class has the ability to specify a particular string number when calling its functions, but I didn't included that.
 
