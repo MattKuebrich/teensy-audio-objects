@@ -3,7 +3,7 @@ STK Instrmnt is a wrapper of all 29 STK Instruments from The Synthesis ToolKit i
 
 STK Effect is a wrapper of all 8 STK Effects. It includes chorus, echo, reverb and pitch shifting effects.
 
-Although both are seperate Teensy audio objects, they share files so it makes sense to package them together. 
+Although both are separate Teensy audio objects, they share files so it makes sense to package them together. 
 
 [STK Effect documentation](STKEffect.md)<br>
 [STK Instrmnt documentation](STKInstrmnt.md)
