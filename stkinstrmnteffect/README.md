@@ -3,8 +3,7 @@ _STK Instrmnt and STK Effect are separate Teensy audio objects, they share files
 Jump to [STK Instrmnt](#instrmnt)<br>
 Jump to [STK Effect](#effect)
 
-<a name="instrmnt"></a>
-# STK Instrmnt 
+# STK Instrmnt <a name="instrmnt"></a>
 
 This is a wrapper of all 29 [STK Instruments](https://ccrma.stanford.edu/software/stk/classstk_1_1Instrmnt.html#details) from [The Synthesis ToolKit in C++ (STK)](https://ccrma.stanford.edu/software/stk/) by Perry R. Cook & Gary P. Scavone. It includes a variety of polyphonic physically modeled and FM instruments. Instead of the original STK files, I used Phil Schatzmann's [The Synthesis ToolKit in C++ (STK) Library for Arduino](https://github.com/pschatzmann/arduino-stk) (with minimal edits) as the basis for this.
 
@@ -124,8 +123,7 @@ For example, the "Pluck Position" of the [Mandolin](https://ccrma.stanford.edu/s
 ``
 StkInstrmnt.controlChange(4, 0.5)
 ``
-<a name="effect"></a>
-# [STK Effect]
+# STK Effect <a name="effect"></a>
 
 This is a wrapper of all 8 [STK Effects](https://ccrma.stanford.edu/software/stk/classstk_1_1Effect.html) from [The Synthesis ToolKit in C++ (STK)](https://ccrma.stanford.edu/software/stk/) by Perry R. Cook & Gary P. Scavone. It includes chorus, echo, reverb and pitch shifting effects.
 
