@@ -17,7 +17,6 @@ The example .ino sketches assume you're using a Teensy 3.x or 4.x with the [Teen
 * [Gate to Trigger](https://github.com/MattKuebrich/teensy-audio-objects/tree/main/gatetotrigger)
 * [Readout](https://github.com/MattKuebrich/teensy-audio-objects/tree/main/readout)
 * [Quantizer](https://github.com/MattKuebrich/teensy-audio-objects/tree/main/quantizer)
-* [Ring Modulator](https://github.com/MattKuebrich/teensy-audio-objects/tree/main/ringmodulator)
 * [Sample and Hold](https://github.com/MattKuebrich/teensy-audio-objects/tree/main/samplehold)
 * [Shift Register / Rungler](https://github.com/MattKuebrich/teensy-audio-objects/tree/main/shiftregister)
 * [Slew Limiter](https://github.com/MattKuebrich/teensy-audio-objects/tree/main/slewlimiter)
