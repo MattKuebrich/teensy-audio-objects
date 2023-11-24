@@ -11,7 +11,7 @@ float paramMax = 1.0; //set max for the distortion parameters
 // Fast approximations of some C++ math functions have been used to speed things up. Those are in the helperfunctions.ino file.
 
 float function1(float x, float r, float a, float b, float c) {
-  //clean passthrough
+  //clean pass-through
   return (x);
 }
 

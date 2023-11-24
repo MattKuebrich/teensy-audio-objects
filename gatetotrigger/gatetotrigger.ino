@@ -27,6 +27,13 @@ AudioConnection          patchCord2(gatetrigger, 0, peak1, 0);
 AudioConnection          patchCord3(drum1, 0, i2s1, 0);
 AudioConnection          patchCord4(drum1, 0, i2s1, 1);
 AudioControlSGTL5000     sgtl5000_1;     //xy=1284,1411
+
+//USB for testing
+//AudioOutputUSB           usb1;           //xy=786.2381210327148,602.0951766967773
+//AudioConnection          patchCord5(osc, 0, usb1, 0);
+//AudioConnection          patchCord6(gatetrigger, 0, usb1, 1);
+
+
 // GUItool: end automatically generated code
 
 #define POT01 14
@@ -51,7 +58,7 @@ void setup() {
 
   osc.begin(1.0, 10, WAVEFORM_SQUARE);
   gatetrigger.duration(1); //1ms
-  gatetrigger.edge(START); //START, END, BOTH
+  gatetrigger.edge(AudioEffectGateToTrigger::BOTH); //START, END, BOTH
 
   AudioInterrupts();
 }

@@ -22,5 +22,5 @@ Set the rate of the noise is processed, which changes the tone quality / pitch o
 Set the chaos noise mode.
 
 Supported modes:
-* CLASSIC
-* BROKEN
+* AudioSynthChaosNoise::CLASSIC
+* AudioSynthChaosNoise::BROKEN

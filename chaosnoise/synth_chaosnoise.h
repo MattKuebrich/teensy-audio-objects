@@ -36,16 +36,19 @@
 #define PHSMAX 0x1000000L
 #define PHSMSK 0x0FFFFFFL
 
-#define CLASSIC         0
-#define BROKEN          1
-
 class AudioSynthChaosNoise : public AudioStream {
 public:
+
+    enum chaosMode {
+    CLASSIC = 0,
+    BROKEN  = 1,
+  };
+  
     AudioSynthChaosNoise() : AudioStream(0, NULL) { }
 
   void chaos(float chaosAmt) { this->chaosAmt = chaosAmt + 1.0;} //shift to the expected 1.0 to 2.0 range
   void rate(float sampleRate) { this->sampleRate = sampleRate; }
-  void mode(float chaosMode) {this->chaosMode = chaosMode;}
+  void mode(float chaosSel) {this->chaosSel = chaosSel;}
 
   virtual void update(void);
 
@@ -57,7 +60,7 @@ private:
   uint32_t phs = 0;
   float lasty1 = 0.2643f;
   float maxlens = PHSMAX / AUDIO_SAMPLE_RATE;
-  short chaosMode = 0;
+  short chaosSel = CLASSIC;
 };
 
 #endif

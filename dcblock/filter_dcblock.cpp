@@ -31,18 +31,27 @@
 void AudioFilterDCBlock::update(void) {
 
   audio_block_t *block = receiveReadOnly();
-  if (!block) return;
+
+  if (nullptr == block) // null block received, treat as silence:
+  {
+    block = allocate(); // get block to write to
+    if (nullptr != block) // allocated OK...
+      memset(block->data, 0, sizeof block->data); // ...fill with silence
+  }
 
   A = (long)(32768.0f * (1.0 - pole));
 
-  for (int i = 0; i < AUDIO_BLOCK_SAMPLES; i++) {
-    int16_t input = block->data[i];
-    curr_y = long(input) - (w >> 15);
-    //error = w - (curr_y<<15);
-    w += (A * curr_y);
-    block->data[i] = saturate16(curr_y);
-  }
+  if (nullptr != block)
+  {
+    for (int i = 0; i < AUDIO_BLOCK_SAMPLES; i++) {
+      int16_t input = block->data[i];
+      curr_y = long(input) - (w >> 15);
+      //error = w - (curr_y<<15);
+      w += (A * curr_y);
+      block->data[i] = saturate16(curr_y);
+    }
 
-  transmit(block);
-  release(block);
+    transmit(block);
+    release(block);
+  }
 }

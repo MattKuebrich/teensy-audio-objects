@@ -5,7 +5,7 @@
  * (https://pbat.ch/sndkit/chaosnoise/) as well as Michael Hetrick's Crackle VCV Rack module.
  * (https://github.com/mhetrick/hetrickcv/blob/master/src/Crackle.cpp).
  *  
- * Both of which are originally based on the Crackle UGen in Supercollider:
+ * Both of which are originally based on the Crackle UGen in Supercollider
  * (https://doc.sccode.org/Classes/Crackle.html).
  *  
  * Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -35,37 +35,36 @@ void AudioSynthChaosNoise::update(void) {
   block = allocate();
   if (block == NULL) return;
 
-  for (int i = 0; i < AUDIO_BLOCK_SAMPLES; i++) {
+  switch (chaosSel) {
+    case CLASSIC:
+      for (int i = 0; i < AUDIO_BLOCK_SAMPLES; i++) {
+        phs += floor(sampleRate * maxlens);
+        if (phs >= PHSMAX) {
+          phs &= PHSMSK;
 
-    //CLASSIC mode
-    if (chaosMode == 0) {
-      phs += floor(sampleRate * maxlens);
-      if (phs >= PHSMAX) {
-        phs &= PHSMSK;
-
-        float y_new;
-        y_new = fabs(chaosAmt * y0 - y1 - 0.05);
-        y1 = y0;
-        y0 = y_new;
+          float y_new;
+          y_new = fabs(chaosAmt * y0 - y1 - 0.05);
+          y1 = y0;
+          y0 = y_new;
+        }
+        block->data[i] = y0 * 32767;
       }
-      block->data[i] = y0 * 32767;
-    }
+      break;
 
-    //BROKEN mode
-    if (chaosMode == 1) {
-      //broken mode
-      phs += floor(sampleRate * maxlens);
-      float y0 = fabs(y1 * chaosAmt - y2 - 0.05f);
+    case BROKEN:
+      for (int i = 0; i < AUDIO_BLOCK_SAMPLES; i++) {
+        phs += floor(sampleRate * maxlens);
+        float y0 = fabs(y1 * chaosAmt - y2 - 0.05f);
 
-      if (phs >= PHSMAX) {
-        phs &= PHSMSK;
-        y2 = y1;
+        if (phs >= PHSMAX) {
+          phs &= PHSMSK;
+          y2 = y1;
+        }
+        y1 = lasty1;
+        lasty1 = constrain(y0, -1.0f, 1.0f);
+        block->data[i] = y0 * 32767;
       }
-      y1 = lasty1;
-      lasty1 = constrain(y0, -1.0f, 1.0f);
-      block->data[i] = y0 * 32767;
-    }
-
+      break;
   }
 
   transmit(block);

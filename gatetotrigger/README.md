@@ -20,10 +20,12 @@ Sets the threshold the input gate needs to reach for a trigger to be generated. 
 Sets the duration of the trigger output. The default time is 1ms, which is a pretty standard trigger length.
 
 ### **edge**(mode);
-Sets which edge of the incoming gate will generate a trigger. The default is START.
+Sets which edge of the incoming gate will generate a trigger. The default is AudioEffectGateToTrigger::START.
 
 Supported edge modes:
-* START
-* END
-* BOTH
+* AudioEffectGateToTrigger::START
+* AudioEffectGateToTrigger::END
+* AudioEffectGateToTrigger::BOTH
+
+
 

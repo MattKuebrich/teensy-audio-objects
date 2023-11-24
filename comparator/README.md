@@ -14,8 +14,8 @@ This comparator has 2 inputs and compares them with different operations. It out
 
 
 Supported modes:
-* LESS
-* GREATER
-* EQUAL
-* NOT_EQUAL
+* AudioEffectComparator::LESS
+* AudioEffectComparator::GREATER
+* AudioEffectComparator::EQUAL
+* AudioEffectComparator::NOT_EQUAL
 

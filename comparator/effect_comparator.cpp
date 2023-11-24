@@ -30,48 +30,79 @@ void AudioEffectComparator::update(void)
   blocka = receiveWritable(0);
   blockb = receiveReadOnly(1);
 
-  if (!blocka) {
-    if (blockb) release(blockb);
-    return;
+  if (nullptr == blocka) // null block received, treat as silence:
+  {
+    blocka = allocate(); // get block to write to
+    if (nullptr != blocka) // allocated OK...
+      memset(blocka->data, 0, sizeof blocka->data); // ...fill with silence
   }
-  if (!blockb) {
+
+  if (nullptr == blockb) // null block received, treat as silence:
+  {
+    blockb = allocate(); // get block to write to
+    if (nullptr != blockb) // allocated OK...
+      memset(blockb->data, 0, sizeof blockb->data); // ...fill with silence
+  }
+
+
+  if (nullptr != blocka && nullptr != blockb)
+  {
+    switch (compareSel) {
+      case LESS:
+        for (int i = 0; i < AUDIO_BLOCK_SAMPLES; i++) {
+          int16_t a = blocka->data[i];
+          int16_t b = blockb->data[i];
+          if (a < b) {
+            a = 32767;
+          } else {
+            a = 0;
+          }
+          blocka->data[i] = a;
+        }
+        break;
+
+      case GREATER:
+        for (int i = 0; i < AUDIO_BLOCK_SAMPLES; i++) {
+          int16_t a = blocka->data[i];
+          int16_t b = blockb->data[i];
+          if (a > b) {
+            a = 32767;
+          } else {
+            a = 0;
+          }
+          blocka->data[i] = a;
+        }
+        break;
+
+      case EQUAL:
+        for (int i = 0; i < AUDIO_BLOCK_SAMPLES; i++) {
+          int16_t a = blocka->data[i];
+          int16_t b = blockb->data[i];
+          if (a == b) {
+            a = 32767;
+          } else {
+            a = 0;
+          }
+          blocka->data[i] = a;
+        }
+        break;
+
+      case NOT_EQUAL:
+        for (int i = 0; i < AUDIO_BLOCK_SAMPLES; i++) {
+          int16_t a = blocka->data[i];
+          int16_t b = blockb->data[i];
+          if (a != b) {
+            a = 32767;
+          } else {
+            a = 0;
+          }
+          blocka->data[i] = a;
+        }
+        break;
+    }
+
+    transmit(blocka);
     release(blocka);
-    return;
+    release(blockb);
   }
-
-  for (int i = 0; i < AUDIO_BLOCK_SAMPLES; i++) {
-    
-    int16_t a = blocka->data[i];
-    int16_t b = blockb->data[i];
-
-    //LESS
-    if (compareMode == 0){
-    if(a < b){a = 32767;}
-    else {a = 0;}
-    }
-
-    //GREATER
-    if (compareMode == 1){
-    if(a > b){a = 32767;}
-    else {a = 0;}
-    }
-
-    //EQUAL
-    if (compareMode == 2){
-    if(a == b){a = 32767;}
-    else {a = 0;}
-    }
-
-    //NOT_EQUAL
-    if (compareMode == 3){
-    if(a != b){a = 32767;}
-    else {a = 0;}
-    }
-
-    blocka->data[i] = a;
-  
-  }
-  transmit(blocka);
-  release(blocka);
-  release(blockb);
 }

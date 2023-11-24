@@ -30,7 +30,8 @@ class AudioEffectFunctionShaper : public AudioStream
 {
   public:
 
-    AudioEffectFunctionShaper() : AudioStream(1, inputQueueArray) { }
+    AudioEffectFunctionShaper() : AudioStream(1, inputQueueArray), shaper(nullptr) { }
+
     virtual void update(void);
     void functionShaper(float (*shaper)(float, float, float, float, float)) { this->shaper = shaper; }
     void inputGain(float inGain) { this->inGain = inGain; }

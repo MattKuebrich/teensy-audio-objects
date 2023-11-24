@@ -26,7 +26,6 @@
  * THE SOFTWARE.
  */
 
- 
 #ifndef filter_dcblock_h_
 #define filter_dcblock_h_
 

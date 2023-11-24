@@ -41,7 +41,7 @@ void setup() {
 void loop() {
   chaosnoise.chaos(mapf(analogRead(POT01), 0, 1023, 0.0, 1.0)); // 0.0 to 1.0
   chaosnoise.rate(mapf(analogRead(POT02), 0, 1023, 0.0, 44100.0)); // in Hz
-  chaosnoise.mode(CLASSIC); //CLASSIC, BROKEN
+  chaosnoise.mode(AudioSynthChaosNoise::CLASSIC); //CLASSIC, BROKEN
 }
 
 

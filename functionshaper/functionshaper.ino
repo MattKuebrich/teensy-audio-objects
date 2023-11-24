@@ -44,7 +44,7 @@ AudioConnection          patchCord1(i2s_input, 0, shaper, 0);
 AudioConnection          patchCord2(shaper, 0, i2s1, 0);
 AudioConnection          patchCord3(shaper, 0, i2s1, 1);
 
-// I used USB for testing, which is why these lines are commented out.
+//USB for testing
 //AudioInputUSB            usb2;           //xy=786.2381210327148,602.0951766967773
 //AudioOutputUSB           usb1;           //xy=786.2381210327148,602.0951766967773
 //AudioConnection          patchCord11(usb2, 0, shaper, 0);
@@ -72,10 +72,11 @@ void loop() {
 
   // Returns an estimate of the total CPU time used during the most recent audio library update.
   // The number is a number from 0 to 100, representing an estimate of the percentage of the total CPU time consumed.
-  // Serial.print("\t\t CPU= ");
-  // Serial.println(AudioProcessorUsage());
+  //Serial.print("\t\t CPU= ");
+  //Serial.println(AudioProcessorUsage());
   //Serial.print("CPU_M = ");
   //Serial.println(AudioProcessorUsageMax());
+
 
   //set function
   int functionIndex = map(analogRead(POT01), 0, 1023, 1, 20);

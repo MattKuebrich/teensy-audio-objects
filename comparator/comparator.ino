@@ -45,7 +45,7 @@ void setup() {
   oscA.begin(1.0, 200, WAVEFORM_TRIANGLE);
   oscB.begin(1.0, 200, WAVEFORM_TRIANGLE);
 
-  comparator1.mode(LESS); // LESS, GREATER, EQUAL, NOT_EQUAL
+  comparator1.mode(AudioEffectComparator::LESS); // LESS, GREATER, EQUAL, NOT_EQUAL
 }
 
 void loop() {

@@ -26,24 +26,27 @@
 #include <Arduino.h>
 #include "AudioStream.h"
 
-#define LESS             0
-#define GREATER          1
-#define EQUAL            2
-#define NOT_EQUAL        3
 
 class AudioEffectComparator : public AudioStream
 {
   public:
+    enum compareMode {
+    LESS      = 0,
+    GREATER   = 1,
+    EQUAL     = 2,
+    NOT_EQUAL = 3,
+  };
+  
     AudioEffectComparator() : AudioStream(2, inputQueueArray) { }
     virtual void update(void);
 
-    void mode(float compareMode) {
-      this->compareMode = compareMode;
+    void mode(float compareSel) {
+      this->compareSel = compareSel;
     }
 
   private:
     audio_block_t *inputQueueArray[2];
-    short compareMode = 0;
+    short compareSel = LESS;
 };
 
 #endif
