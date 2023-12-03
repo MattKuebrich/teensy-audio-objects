@@ -39,6 +39,7 @@ void AudioSynthDust::update(void) {
     if (moddata) {
       destinyMod = (float)moddata->data[i] / 32768.0f; //scale to -1.0 to 1.0
       release(moddata);
+      moddata = NULL;
     }
 
     float densityInput = desnsityIn + destinyMod;

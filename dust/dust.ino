@@ -31,8 +31,8 @@ AudioConnection          patchCord3(dust, 0, i2s1, 1);
 
 //usb for testing
 //AudioOutputUSB           usb_out;           //xy=792.8889045715332,396.22222328186035
-//AudioConnection          patchCord3(dust, 0, usb_out, 0);
-//AudioConnection          patchCord4(dust, 0, usb_out, 1);
+//AudioConnection          patchCord4(dust, 0, usb_out, 0);
+//AudioConnection          patchCord5(dust, 0, usb_out, 1);
 AudioControlSGTL5000     sgtl5000_1;     //xy=1284,1411
 // GUItool: end automatically generated code
 
