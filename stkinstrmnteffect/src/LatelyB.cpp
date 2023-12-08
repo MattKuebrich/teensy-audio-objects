@@ -4,22 +4,23 @@
 
 /***************************************************/
 /*! \class LatelyB
-    \brief New STK-style "Crystal Choir" FM synthesis instrument.
+    \brief NEW STK-style Lately Bass FM synthesis instrument.
 
-    This class implements 3 parallel operators with
-    one modulated, by one with feedback modulation,
-    also referred to as algorithm 7 of the TX81Z.
+    This class implements 3 cascade operators with
+    feedback modulation, also referred to as
+    algorithm 2 of the TX81Z.
 
-    Algorithm 3 is: 4-->3-->\
-                        2--> + -->Out
-                        1-->/
+    Algorithm 2 is: 
+    
+    ____4--\
+    3--+-->>2-->1-->Out
 
     Control Change Numbers:
-       - Total Modulator Index = 2
-       - Modulator Crossfade = 4
-       - LFO Speed = 11
-       - LFO Depth = 1
-       - adsr_ 2 & 4 Target = 128
+        - Total Modulator Index = 2
+        - Modulator Crossfade = 4
+        - LFO Speed = 11
+        - LFO Depth = 1
+        - ADSR 2 & 4 Target = 128
 
     The basic Chowning/Stanford FM patent expired
     in 1995, but there exist follow-on patents,

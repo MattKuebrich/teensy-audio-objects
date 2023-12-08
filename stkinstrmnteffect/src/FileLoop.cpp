@@ -49,7 +49,6 @@ void FileLoop :: openFile( std::string fileName, bool raw, bool doNormalize, boo
   // Attempt to open the file ... an error might be thrown here.
   file_.open( fileName, raw );
 
-
   // Determine whether chunking or not.
   if ( file_.fileSize() > chunkThreshold_ ) {
     chunking_ = true;
@@ -60,12 +59,6 @@ void FileLoop :: openFile( std::string fileName, bool raw, bool doNormalize, boo
     chunking_ = false;
     data_.resize( file_.fileSize() + 1, file_.channels() );
   }
-
-
-  // Always chunking, added by MK. This helps un-fizz the FM instruments
-   // chunking_ = true;
-   // chunkPointer_ = 0;
-   // data_.resize( chunkSize_ + 1, file_.channels() );
 
   if ( doInt2FloatScaling )
     int2floatscaling_ = true;
@@ -107,7 +100,7 @@ void FileLoop :: setRate( StkFloat rate )
   //if ( std::fmod( rate_, 1.0 ) != 0.0 ) interpolate_ = true;
   //else interpolate_ = false;
 
-  interpolate_ = false; // added by mk, may help remove FM fizz
+  interpolate_ = false; // added by mk, helps remove FM fizz
 
 }
 

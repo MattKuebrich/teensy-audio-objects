@@ -13,9 +13,12 @@ namespace stk {
  one modulated, by one with feedback modulation,
  also referred to as algorithm 7 of the TX81Z.
 
- Algorithm 3 is :     4-->3-->\
- 2--> + -->Out
- 1-->/
+Algorithm 7 is :
+    
+    1 -\
+    2 - +-> Out 
+    4-->3 -/ 
+    
 
  Control Change Numbers:
  - Total Modulator Index = 2

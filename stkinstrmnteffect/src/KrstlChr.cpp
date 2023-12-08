@@ -4,30 +4,33 @@
 
 /***************************************************/
 /*! \class KrstlChr
-    \brief New STK-style "Crystal Choir" FM synthesis instrument.
+ \brief New STK-style Crystal Choir FM synthesis instrument.
 
-    This class implements 3 parallel operators with
-    one modulated, by one with feedback modulation,
-    also referred to as algorithm 7 of the TX81Z.
+ This class implements 3 parallel operators with
+ one modulated, by one with feedback modulation,
+ also referred to as algorithm 7 of the TX81Z.
 
-    Algorithm 3 is: 4-->3-->\
-                        2--> + -->Out
-                        1-->/
+Algorithm 7 is :
+    
+    1 -\
+    2 - +-> Out 
+    4-->3 -/ 
+    
 
-    Control Change Numbers:
-       - Total Modulator Index = 2
-       - Modulator Crossfade = 4
-       - LFO Speed = 11
-       - LFO Depth = 1
-       - adsr_ 2 & 4 Target = 128
+ Control Change Numbers:
+ - Total Modulator Index = 2
+ - Modulator Crossfade = 4
+ - LFO Speed = 11
+ - LFO Depth = 1
+ - adsr_ 2 & 4 Target = 128
 
-    The basic Chowning/Stanford FM patent expired
-    in 1995, but there exist follow-on patents,
-    mostly assigned to Yamaha. If you are of the
-    type who should worry about this (making
-    money) worry away.
+ The basic Chowning/Stanford FM patent expired
+ in 1995, but there exist follow-on patents,
+ mostly assigned to Yamaha.  If you are of the
+ type who should worry about this (making
+ money) worry away.
 
-    by Perry R. Cook, 2021.
+ by Perry R. Cook, 2021.
  */
 /***************************************************/
 

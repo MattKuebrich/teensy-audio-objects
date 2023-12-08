@@ -11,10 +11,12 @@ namespace stk {
 
     This class implements 3 cascade operators with
     feedback modulation, also referred to as
-    algorithm 3 of the TX81Z.
+    algorithm 2 of the TX81Z.
 
-    Algorithm 3 is: 4--\
-                3-->2-- + -->1-->Out
+    Algorithm 2 is: 
+    
+    ____4--\
+    3--+-->>2-->1-->Out
 
     Control Change Numbers:
         - Total Modulator Index = 2
