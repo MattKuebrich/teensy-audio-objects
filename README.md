@@ -1,8 +1,10 @@
 # teensy-audio-objects
 
-These are simple audio objects I've written for the [Teensy Audio Library](https://www.pjrc.com/teensy/td_libs_Audio.html). I should mention I don't _really_ know what I'm doing, but these have been useful in my own synth DIY projects and a fun challenge.
+These are simple audio objects I've written / adapted for the [Teensy Audio Library](https://www.pjrc.com/teensy/td_libs_Audio.html). I should mention I don't _really_ know what I'm doing, but these have been useful in my own synth DIY projects and a fun challenge.
 
 The example .ino sketches assume you're using a Teensy 3.x or 4.x with the [Teensy Audio Adapter](https://www.pjrc.com/store/teensy3_audio.html) and have a few potentiometers connected. The audio objects are included locally, so there is no need to make modifications to your existing Teensy Audio Library. I'm using [Teensyduino](https://www.pjrc.com/teensy/td_download.html) on a Mac to write and test these.
+
+I've posted about these objects on the [PJRC forum](https://forum.pjrc.com/index.php?threads/some-new-audio-objects-stk-instruments-effects-bytebeat-slew-limiter-etc.73915/) as well.
 
 **Completed Audio Objects:**
 
