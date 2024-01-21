@@ -54,5 +54,5 @@ Supported modes:
 
 * [Very cool audiovisual demonstration of a logistic map on YouTube](https://www.youtube.com/watch?v=lK5oqf8ROCo)
 
-* [logistic map](https://editor.p5js.org/mattkuebrich/sketches/X0YJukvoU) and [doubling map](https://editor.p5js.org/mattkuebrich/sketches/ZQL43UFdk) visualized in p5js .
+* [logistic map](https://editor.p5js.org/mattkuebrich/sketches/X0YJukvoU) and [doubling map](https://editor.p5js.org/mattkuebrich/sketches/ZQL43UFdk) visualized in p5js
 
