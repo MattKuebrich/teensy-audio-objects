@@ -8,6 +8,7 @@ The example .ino sketches assume you're using a Teensy 3.x or 4.x with the [Teen
 
 * [Bernoulli Gate](https://github.com/MattKuebrich/teensy-audio-objects/tree/main/bernoulligate)
 * [Bytebeat](https://github.com/MattKuebrich/teensy-audio-objects/tree/main/bytebeat)
+* [Chaos Maps](https://github.com/MattKuebrich/teensy-audio-objects/tree/main/chaosmaps)
 * [Chaos Noise](https://github.com/MattKuebrich/teensy-audio-objects/tree/main/chaosnoise)
 * [Comparator](https://github.com/MattKuebrich/teensy-audio-objects/tree/main/comparator)
 * [DC Block](https://github.com/MattKuebrich/teensy-audio-objects/tree/main/dcblock)
