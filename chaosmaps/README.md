@@ -2,7 +2,7 @@
 
 This object implements two classic chaotic maps, a logistic map and an n-fold map. It can be used to create noisy / chaotic sounds or modulation sources.
 
-I first read about these in James Gleick's book *Chaos: Making a New Science* and was interested to see how they could be used in an audio context. 
+I first read about these in James Gleick's book [*Chaos: Making a New Science*](https://en.wikipedia.org/wiki/Chaos:_Making_a_New_Science) and was interested to see how they could be used in an audio context. 
 
 The logistic map is mathematically expressed like this:
 
