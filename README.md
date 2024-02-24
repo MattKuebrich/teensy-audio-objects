@@ -18,6 +18,7 @@ I've posted about these objects on the [PJRC forum](https://forum.pjrc.com/index
 * [FM Drum](https://github.com/MattKuebrich/teensy-audio-objects/tree/main/fmdrum)
 * [Function Shaper](https://github.com/MattKuebrich/teensy-audio-objects/tree/main/functionshaper)
 * [Gate to Trigger](https://github.com/MattKuebrich/teensy-audio-objects/tree/main/gatetotrigger)
+* [Ladder Lite](https://github.com/MattKuebrich/teensy-audio-objects/tree/main/ladderlite)
 * [Readout](https://github.com/MattKuebrich/teensy-audio-objects/tree/main/readout)
 * [Quantizer](https://github.com/MattKuebrich/teensy-audio-objects/tree/main/quantizer)
 * [Sample and Hold](https://github.com/MattKuebrich/teensy-audio-objects/tree/main/samplehold)
