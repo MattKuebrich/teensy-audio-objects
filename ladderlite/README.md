@@ -6,4 +6,4 @@ I'm using this ladder filter with the slow-ish [Adafruit ItsyBitsy M4 Express](h
 
 The functions are the same as the [library version of the ladder filter](https://www.pjrc.com/teensy/gui/?info=AudioFilterLadder), aside from how you set the ``interpolationMethod()``. For that use ``LADDERLITE_FILTER_INTERPOLATION_FIR_POLY`` or ``LADDERLITE_FILTER_INTERPOLATION_LINEAR``. If CPU usage is critical, use the linear option. 
 
-Note: The included sketch is written for the ItsyBitsy M4 Express, but could be easily updated to work for Teensy. 
+Note: The included sketch is written for the Adafruit ItsyBitsy M4 Express, but could be easily updated to work for Teensy. 
