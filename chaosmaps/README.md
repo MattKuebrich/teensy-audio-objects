@@ -8,7 +8,7 @@ The logistic map is mathematically expressed like this:
 
 $x_{n+1} = r \cdot x_n \cdot (1 - x_n)$
 
-This GIF shows the logistic map on an oscilloscope as the ``rate`` (or ``r``) increases from about 1.0 to 4.0. It begins with stablity. As the rate increases, bifurcations begin - the output oscillating between two values, then four, then eight, and so on. As the rate reaches around 3.6, it transitions into chaos. Plotted differently, the map would look something like [this](https://en.wikipedia.org/wiki/Bifurcation_diagram#/media/File:Logistic_Map_Bifurcation_Diagram,_Matplotlib.svg). 
+This GIF shows the logistic map on an oscilloscope as the ``rate`` (or ``r``) increases from about 1.0 to 4.0. It begins with stability. As the rate increases, bifurcations begin - the output oscillating between two values, then four, then eight, and so on. As the rate reaches around 3.6, it transitions into chaos. Plotted differently, the map would look something like [this](https://en.wikipedia.org/wiki/Bifurcation_diagram#/media/File:Logistic_Map_Bifurcation_Diagram,_Matplotlib.svg). 
 
 <img src="https://github.com/MattKuebrich/teensy-audio-objects/blob/main/chaosmaps/logisticmap.gif" alt="logistic map on a scope" width="350"/>
 
