@@ -26,6 +26,9 @@ I've posted about these objects on the [PJRC forum](https://forum.pjrc.com/index
 * [Slew Limiter](https://github.com/MattKuebrich/teensy-audio-objects/tree/main/slewlimiter)
 * [STK Instrmnt / STK Effect](https://github.com/MattKuebrich/teensy-audio-objects/tree/main/stkinstrmnteffect)
 
+**Utilities:**
+* [wav2int16](https://github.com/MattKuebrich/teensy-audio-objects/tree/main/wav2int16)
+
 **In Development:**
 * Bitbeat?
 * Envelope Follower
